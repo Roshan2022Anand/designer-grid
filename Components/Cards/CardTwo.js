@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardTwo = () => {
     return (
-        <article className='card-default'>
+        <article className='card-2 card-default'>
 
         </article>
     )
