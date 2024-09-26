@@ -40,8 +40,9 @@ const ColorMode = ({ mode }) => {
     //     moveAround();
     // },[])
     return (
-        <div onClick={toggleDarkMode} id={mode.id} className='absolute w-[4vw] h-[4vw] z-50 rounded-full hover:scale-150 text-[7px]'
+        <div onClick={toggleDarkMode} id={mode.id} className='absolute w-[4vw] h-[4vw] rounded-full hover:scale-150 text-[7px]'
             style={{
+                zIndex: 50,
                 backgroundColor: mode.convertColor,
                 top: `${gsap.utils.random(10, 30, 1)}%`,
                 left: `${gsap.utils.random(10, 80, 1)}%`
