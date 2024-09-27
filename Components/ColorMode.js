@@ -26,19 +26,19 @@ const ColorMode = ({ mode }) => {
         document.documentElement.style.setProperty('--highlight-color', mode.convertHighlight);
     }
 
-    // useGSAP(() => {
-    //     const moveAround = async () => {
-    //         while (true) {
-    //             gsap.to(`#${mode.id}`, {
-    //                 duration: 10,
-    //                 top: `${gsap.utils.random(10, 30, 1)}%`,
-    //                 left: `${gsap.utils.random(10, 80, 1)}%`
-    //             })
-    //             await waitExc(10000); 
-    //         }
-    //     }
-    //     moveAround();
-    // },[])
+    useGSAP(() => {
+        const moveAround = async () => {
+            while (true) {
+                gsap.to(`#${mode.id}`, {
+                    duration: 10,
+                    top: `${gsap.utils.random(10, 30, 1)}%`,
+                    left: `${gsap.utils.random(10, 80, 1)}%`
+                })
+                await waitExc(10000); 
+            }
+        }
+        moveAround();
+    },[])
     return (
         <div onClick={toggleDarkMode} id={mode.id} className='absolute z-50 w-[4vw] h-[4vw] rounded-full hover:scale-150 text-[7px]'
             style={{
