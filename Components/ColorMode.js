@@ -40,9 +40,10 @@ const ColorMode = ({ mode }) => {
     //     moveAround();
     // },[])
     return (
-        <div onClick={toggleDarkMode} id={mode.id} className='absolute w-[4vw] h-[4vw] rounded-full hover:scale-150 text-[7px]'
+        <div onClick={toggleDarkMode} id={mode.id} className='w-[4vw] h-[4vw] rounded-full hover:scale-150 text-[7px]'
             style={{
                 zIndex: 50,
+                position: 'absolute',
                 backgroundColor: mode.convertColor,
                 top: `${gsap.utils.random(10, 30, 1)}%`,
                 left: `${gsap.utils.random(10, 80, 1)}%`
@@ -52,3 +53,10 @@ const ColorMode = ({ mode }) => {
 }
 
 export default ColorMode
+
+// now as a developer i want to host my personal projects and alos my client projects so i want a hosting platform so ihave two hard choice to make one is hostinger another one vercel in both i am ready to take the paid version but tell me all the pros, cons, extra features in a chart form
+
+//     * i am in india so if there is any pros or cons for perticular hosting platform in india then mention it
+//         * is it worth it for money may be for monthy or early
+//             * past records
+//                 * as i use react / next node / express mongo stack for development it matters for simplicity security scalability and storage 
