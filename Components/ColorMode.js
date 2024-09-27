@@ -44,6 +44,8 @@ const ColorMode = ({ mode }) => {
             style={{
                 zIndex: 50,
                 position: 'absolute',
+                height: '4vw',
+                width: '4vw',
                 backgroundColor: mode.convertColor,
                 top: `${gsap.utils.random(10, 30, 1)}%`,
                 left: `${gsap.utils.random(10, 80, 1)}%`
