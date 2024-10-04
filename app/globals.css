@@ -3,51 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #1E1E1E;
-  --text-color: #F5F5F5;
-  --highlight-color: #F77F00;
+  /* Palette One */
+  --intro-bg-color: #1E1E1E;
+  --intro-text-color: #ECECEC;
+  --intro-highlight-color: #FF6F00;
 
-  /* Theme 1 */
-  /* Section 1 */
-  --theme-1-section-1-bg: #03045E;
-  --theme-1-section-1-text: #FFFFFF;
-  --theme-1-section-1-highlight: #00B4D8;
-  /* Section 2 */
-  --theme-1-section-2-bg: #1E1E1E;
-  --theme-1-section-2-text: #F5F5F5;
-  --theme-1-section-2-highlight: #8338EC;
-  /* Section 3 */
-  --theme-1-section-3-bg: #3A5A40;
-  --theme-1-section-3-text: #F5F5F5;
-  --theme-1-section-3-highlight: #DDA15E;
+  /* Palette Two (Simplified and balanced) */
+  --skills-bg-color: #FF7043;
+  --skills-text-color: #2C2C2C;
+  --skills-highlight-color: #FFA07A;
 
-  /* Theme 2 */
-  /* Section 1 */
-  --theme-2-section-1-bg: #000000;
-  --theme-2-section-1-text: #FFFFFF;
-  --theme-2-section-1-highlight: #F2CC8F;
-  /* Section 2 */
-  --theme-2-section-2-bg: #540B0E;
-  --theme-2-section-2-text: #F5F5F5;
-  --theme-2-section-2-highlight: #EAE2B7;
-  /* Section 3 */
-  --theme-2-section-3-bg: #283618;
-  --theme-2-section-3-text: #FFFFFF;
-  --theme-2-section-3-highlight: #90E0EF;
+  /* Palette Three */
+  --design-bg-color: #39FF14;
+  --design-text-color: #101010;
+  --design-highlight-color: #FF9500;
 
-  /* Theme 3 */
-  /* Section 1 */
-  --theme-3-section-1-bg: #1E1E1E;
-  --theme-3-section-1-text: #F5F5F5;
-  --theme-3-section-1-highlight: #FF6F20;
-  /* Section 2 */
-  --theme-3-section-2-bg: #1E1E1E;
-  --theme-3-section-2-text: #F5F5F5;
-  --theme-3-section-2-highlight: #A9DEF9;
-  /* Section 3 */
-  --theme-3-section-3-bg: #1E1E1E;
-  --theme-3-section-3-text: #F5F5F5;
-  --theme-3-section-3-highlight: #8338EC;
+  /* Palette Four (Blossom theme with a white contrast) */
+  --dev-bg-color: #5A3D5C;
+  --dev-text-color: #e2d3d6;
+  --dev-highlight-color: #FFC0CB;
+
+  /* Secondary background color */
+  --sec-bg-color: #b8b7b7;
 }
 
 *,
@@ -59,24 +36,8 @@
   user-select: none;
 }
 
-html,
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  width: 100vw;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-.hero-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vw;
-  position: relative;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .quote-text {
@@ -85,8 +46,58 @@ body {
 
   &:nth-of-type(4) {
     font-weight: bolder;
-    color: var(--highlight-color);
+    color: var(--design-highlight-color);
   }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid black;
+  position: relative;
+}
+
+.colorMode-section {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  z-index: 50;
+  padding: 2% 5px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #e6e6e2;
+}
+
+.colorMode {
+  width: clamp(50px, 10vw, 100px);
+  height: clamp(50px, 10vw, 100px);
+  font-size: clamp(10px, 2vw, 20px);
+  border-radius: 50%;
+  align-content: center;
+  padding: 0 2px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.colorModeStick {
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translate(0, -50%);
+  background-color: inherit;
+}
+
+.colorModeConvertor{
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: inherit;
 }
 
 .cards-section {

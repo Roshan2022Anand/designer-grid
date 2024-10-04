@@ -1,0 +1,12 @@
+.hero-section {
+    background-color: var(--design-bg-color);
+    color: var(--design-text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 10vw;
+    position: relative;
+}
